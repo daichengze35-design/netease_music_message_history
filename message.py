@@ -32,10 +32,10 @@ def write_history():
             date = history.xpath("./div[1]/text()")[0]
             sender = history.xpath("./div[2]/a/@title")[0]
 
-            if sender == "常青树难以长情":
-                sender = "韩天然"
-            if sender == "嘻嘻10号":
-                sender = "戴承泽"
+            # if sender == "origin name":
+            #    sender = "new name"
+            # if sender == "origin name":
+            #    sender = "new name"
 
             msg = "".join(history.xpath(".//div[@class = 'cnt f-brk']/p//text()"))
 
