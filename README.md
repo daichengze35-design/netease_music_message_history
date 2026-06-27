@@ -26,7 +26,7 @@ python login.py
 After the browser opens, log in to NetEase Cloud Music manually. The login profile will be saved here:
 
 ```text
-netease/selenium_chrome_profile/
+selenium_chrome_profile/
 ```
 
 Then run [message.py](./message.py):
@@ -42,7 +42,7 @@ If the script asks you to select a friend, select the friend in the browser wind
 The scraped message history is written to:
 
 ```text
-netease/msghistory/history.txt
+msghistory/history.txt
 ```
 
 ## Edit Display Names
@@ -60,4 +60,4 @@ Change `"origin name"` to the original sender name, and change `"new name"` to t
 
 ## Notes
 
-- `netease/selenium_chrome_profile/` and `netease/msghistory/` are local personal data folders. Do not commit login data or scraped private message history to GitHub.
+- `selenium_chrome_profile/` and `msghistory/` are local personal data folders. Do not commit login data or scraped private message history to GitHub.

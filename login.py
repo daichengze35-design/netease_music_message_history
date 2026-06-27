@@ -7,7 +7,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import time
 
-PROFILE_DIR = Path("./netease/selenium_chrome_profile").resolve()
+BASE_DIR = Path(__file__).resolve().parent
+PROFILE_DIR = BASE_DIR / "selenium_chrome_profile"
+PAGE_SOURCE_FILE = BASE_DIR / "page_source.html"
 
 options = Options()
 options.add_argument(f"--user-data-dir={PROFILE_DIR}")
@@ -24,7 +26,7 @@ try:
     login_bottom.click()
     
     html = driver.page_source
-    with open("page_source.html", mode="w") as f:
+    with open(PAGE_SOURCE_FILE, mode="w", encoding="utf-8") as f:
         f.write(html)
     try:
         wait_2m.until(EC.presence_of_element_located((By.XPATH, '//div[@class="head f-fl f-pr"]')))
